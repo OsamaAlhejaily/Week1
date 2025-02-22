@@ -15,7 +15,7 @@ This registration system allows companies to:
 
 Setup Instructions:
 
-- You can open `index.html` directly in your browser, or use vsCode's Live Server extension
+- You can open `index.html` by using vscode's Live Server extension
 
 ---
 Features Implemented:
