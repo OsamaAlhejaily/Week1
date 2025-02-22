@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Registration</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#198754',  
+              secondary: '#6c757d', 
+              accent: '#198754',    
+              lightGray: '#f8f9fa'  
+            },
+            fontFamily: {
+              sans: ['"Roboto"', 'sans-serif']
+            }
+          },
+        }
+      }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-lightGray font-sans">
+    <div id="root"></div>
+
+    <script type="module" src="components/CompanyDetails.js"></script>
+    <script type="module" src="components/AddressInformation.js"></script>
+    <script type="module" src="components/AccountDetails.js"></script>
+    <script type="module" src="components/SubmitSection.js"></script>
+    <script type="module" src="components/LoadingIndicator.js"></script>
+    <script type="module" src="components/ErrorMessage.js"></script>
+    <script type="module" src="components/RegistrationForm.js"></script>
+
+    <script type="module" src="./api.js"></script>
+    
+
+</body>
+</html>
