@@ -1,6 +1,6 @@
 Company Registration System:
 
-A responsive registration system for companies, built using HTML, Tailwind CSS, and JavaScript. It features form validation, real-time data fetching, and a loading spinner.
+A responsive registration system for companies, built using HTML, Tailwind CSS, Animate CSS, and JavaScript. It features form validation, real-time data fetching, and a loading spinner.
 
 ---
 
