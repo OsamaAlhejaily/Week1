@@ -7,7 +7,7 @@ A responsive registration system for companies, built using HTML, Tailwind CSS, 
 Project Overview:
 
 This registration system allows companies to:
-- Enter details like Company Name, Registration Number, Email, Phone, Address, Password, and more.
+- Enter details like Company Name, Registration Number, Email, Phone, Address, Business Type, and Password.
 - Fetch company details from an external API using the registration number.
 - Experience real-time form validation and error messages.
 
