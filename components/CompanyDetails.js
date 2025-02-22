@@ -17,6 +17,16 @@ export const CompanyDetails = () => `
             <input type="text" id="companyName" class="w-full p-3 border rounded-md " placeholder="Company Name" required>
         </div>
 
+        <div class="mb-4">
+            <label class="block text-secondary mb-1">Phone Number</label>
+            <input 
+                type="text" 
+                id="phone" 
+                class="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary" 
+                placeholder="Phone Number" 
+                readonly>
+        </div>
+
         <!-- Address -->
         <div class="mb-4">
             <label class="block text-secondary mb-1">Address</label>
@@ -37,6 +47,29 @@ export const CompanyDetails = () => `
             <p id="emailError" class="text-red-500 text-sm hidden mt-1"></p>
         </div>
     </div>
+        
+        <!-- Business Types -->
+       <div class="col-span-2">
+    <label class="block text-gray-600 mb-2">Business Type</label>
+    <select id="businessType" class="w-full p-3 border rounded-md" required>
+        <option value="">Select Business Type</option>
+        <option value="retail">Retail</option>
+        <option value="service">Service</option>
+        <option value="manufacturing">Manufacturing</option>
+        <option value="other">Other</option>
+    </select>
+
+    <!-- Other -->
+    <input 
+        type="text" 
+        id="otherBusinessType" 
+        class="w-full p-3 border rounded-md mt-2 hidden " 
+        placeholder="Please type the other business type">
+
+    <p class="text-red-500 text-sm hidden" id="error-businessType">This field is required.</p>
+</div>
+    <hr class="border-t border-gray-200 mb-6">
+
     <!-- Loading Indicator -->
         <div class="spinner border-4 border-primary border-t-transparent border-solid rounded-full w-12 h-12 animate-spin mx-auto hidden"></div>
 

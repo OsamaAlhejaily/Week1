@@ -1,10 +1,10 @@
-import { RegistrationForm } from './components/RegistrationForm.js';
+import { RegistrationForm } from '../components/RegistrationForm.js';
 
 import { 
     validatePasswordMatch, 
     validatePasswordStrength, 
     validateEmailFormat 
-} from './utils/validation.js';
+} from '../utils/validation.js';
 
 const state = {
     formData: {
@@ -49,6 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (validateForm()) {
                 alert('Form submitted successfully!');
+                otherBusinessType.classList.add('hidden');
                 form.reset();
             } else {
                 alert('Please correct the errors before submitting the form.');
@@ -64,6 +65,7 @@ const fetchCompanyDetails = async () => {
     const companyName = document.getElementById('companyName');
     const email = document.getElementById('email');
     const phone = document.getElementById('phone');
+    
 
     try {
         state.loading = true;
@@ -83,11 +85,13 @@ const fetchCompanyDetails = async () => {
             companyName.value = company.company.name;
             address.value = fullAddress;
             email.value = company.email;
+            phone.value = company.phone;
         } 
         else {
             companyName.value = '';
             address.value = '';
             email.value = '';
+            phone.value = '';
             errorMessage.classList.remove('hidden');
             errorMessage.textContent = 'No company found with this registration number.';
         }
@@ -101,4 +105,18 @@ const fetchCompanyDetails = async () => {
     }
 };
 
+document.addEventListener('DOMContentLoaded', () => {
+    const businessType = document.getElementById('businessType');
+    const otherBusinessType = document.getElementById('otherBusinessType');
 
+    businessType.addEventListener('change', (event) => {
+        if (event.target.value === 'other') {
+            otherBusinessType.classList.remove('hidden'); 
+            otherBusinessType.setAttribute('required', 'true'); 
+        } else {
+            otherBusinessType.classList.add('hidden'); 
+            otherBusinessType.value = ''; 
+            otherBusinessType.removeAttribute('required'); 
+        }
+    });
+});

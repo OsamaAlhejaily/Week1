@@ -1,5 +1,4 @@
 import { AccountDetails } from './AccountDetails.js';
-import { AddressInformation } from './AddressInformation.js';
 import { CompanyDetails } from './CompanyDetails.js';
 import { ErrorMessage } from './ErrorMessage.js';
 import { SubmitSection } from './SubmitSection.js';
@@ -11,7 +10,6 @@ export const RegistrationForm = () => `
             <h1 class="text-3xl font-bold mb-6 text-primary text-center">Company Registration</h1>
             <form id="registrationForm" class="space-y-6">
                 ${CompanyDetails()}
-                ${AddressInformation()}
                 ${AccountDetails()}
                 ${SubmitSection()}
                 ${LoadingIndicator()}
